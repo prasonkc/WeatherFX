@@ -1,0 +1,187 @@
+.root-container {
+    -fx-font-family: "Segoe UI", "Helvetica", sans-serif;
+    -fx-background-color: #4facfe;
+}
+
+.morning-theme { -fx-background-color: #FFB3A7 !important; }
+.day-theme     { -fx-background-color: #4facfe !important; }
+.evening-theme { -fx-background-color: #E67E22 !important; }
+.night-theme   { -fx-background-color: #2C3E50 !important; }
+
+.weather-card {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 25;
+    -fx-padding: 25;
+}
+
+.search-panel {
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-background-radius: 22;
+    -fx-padding: 18;
+}
+
+.header-block {
+    -fx-padding: 2 0 0 0;
+}
+
+.hero-card {
+    -fx-padding: 28;
+}
+
+.hero-row {
+    -fx-alignment: center-left;
+}
+
+.hero-copy {
+    -fx-alignment: center-left;
+}
+
+.city-text {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-letter-spacing: 0.4px;
+}
+
+.time-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-opacity: 0.82;
+}
+
+.input {
+    -fx-background-radius: 20 0 0 20;
+    -fx-background-color: white;
+    -fx-padding: 13 16;
+    -fx-font-size: 16px;
+}
+.search-button {
+    -fx-background-radius: 0 20 20 0;
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-padding: 13 20;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+}
+
+.search-box {
+    -fx-max-width: Infinity;
+}
+
+.temp-text {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.description-text {
+    -fx-font-size: 30px;
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+.unit-radio {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+.detail-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-opacity: 0.68;
+}
+
+.detail-value {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.details-grid {
+    -fx-padding: 8 0 0 0;
+}
+
+.detail-cell {
+    -fx-background-color: rgba(255, 255, 255, 0.08);
+    -fx-background-radius: 16;
+    -fx-padding: 14 16;
+    -fx-min-width: 170;
+}
+
+.detail-cell-wide {
+    -fx-min-width: 358;
+}
+
+.section-card {
+    -fx-padding: 20 22;
+}
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.history {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-fixed-cell-size: 30px;
+    -fx-padding: 0;
+}
+
+.history .viewport {
+    -fx-background-color: transparent;
+}
+
+.history .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: rgba(255, 255, 255, 0.16);
+    -fx-border-width: 0 0 1 0;
+    -fx-font-size: 13px;
+    -fx-padding: 4 2;
+}
+
+.history .scroll-bar:vertical,
+.history .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.history .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.22);
+    -fx-background-radius: 999;
+}
+
+.forecast-card {
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-background-radius: 15;
+    -fx-padding: 12;
+    -fx-min-width: 120;
+    -fx-max-width: 40;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 1;
+    -fx-border-radius: 15;
+}
+
+.forecast-date {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-opacity: 0.7;
+}
+
+.forecast-info {
+    -fx-font-size: 11px;
+    -fx-text-fill: white;
+    -fx-font-weight: 500;
+    -fx-text-alignment: center;
+}
+
+#forecastBox {
+    -fx-padding: 10 0;
+}

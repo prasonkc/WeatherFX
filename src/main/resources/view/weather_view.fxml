@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:id="mainContainer" spacing="20" alignment="TOP_CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.weather.controller.WeatherController"
+      prefWidth="800" prefHeight="1999" styleClass="root-container"
+      stylesheets="@style.css">
+
+    <padding>
+        <Insets top="20" right="25" bottom="20" left="25"/>
+    </padding>
+
+    <HBox alignment="CENTER" styleClass="search-box">
+        <TextField fx:id="cityField" promptText="Search City..." prefWidth="280" styleClass="input"/>
+        <Button text="Go" onAction="#onSearchClick" styleClass="search-button"/>
+    </HBox>
+
+    <VBox alignment="CENTER" spacing="5">
+        <Label fx:id="cityNameLabel" text="Search for a city" styleClass="city-text"/>
+        <Label fx:id="localTimeLabel" text="Local Time: --:--" styleClass="time-text"/>
+    </VBox>
+
+    <VBox alignment="CENTER" spacing="10">
+        <HBox spacing="15" alignment="CENTER">
+            <Label text="Temperature" styleClass="detail-label"/>
+            <RadioButton fx:id="celsiusRadio" text="°C" selected="true" styleClass="unit-radio">
+                <toggleGroup><ToggleGroup fx:id="unitGroup"/></toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="fahrenheitRadio" text="°F" toggleGroup="$unitGroup" styleClass="unit-radio"/>
+        </HBox>
+        <HBox spacing="15" alignment="CENTER">
+            <Label text="Wind" styleClass="detail-label"/>
+            <RadioButton fx:id="metersPerSecondRadio" text="m/s" selected="true" styleClass="unit-radio">
+                <toggleGroup><ToggleGroup fx:id="windUnitGroup"/></toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="milesPerHourRadio" text="mph" toggleGroup="$windUnitGroup" styleClass="unit-radio"/>
+        </HBox>
+    </VBox>
+
+    <VBox spacing="10" alignment="CENTER" styleClass="weather-card" maxHeight="230">
+        <ImageView fx:id="weatherIcon" fitWidth="100" fitHeight="100" preserveRatio="true"/>
+        <VBox alignment="CENTER">
+            <HBox alignment="BOTTOM_RIGHT">
+                <Label text="Feels Like " styleClass="detail-label"/>
+                <Label fx:id="feelsLikeLabel" styleClass="detail-value"/>
+            </HBox>
+
+            <Label fx:id="resultLabel" text="--°C" styleClass="temp-text"/>
+        </VBox>
+        <Label fx:id="detailsLabel" text="Condition" styleClass="description-text"/>
+
+        <Separator opacity="0.3" maxWidth="300"/>
+
+        <GridPane hgap="20" vgap="10" alignment="CENTER">
+                <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <Label text="Min" styleClass="detail-label"/>
+                    <Label fx:id="minTempLabel" text="--" styleClass="detail-value"/>
+                </VBox>
+                <VBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                    <Label text="Max" styleClass="detail-label"/>
+                    <Label fx:id="maxTempLabel" text="--" styleClass="detail-value"/>
+                </VBox>
+
+                <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <Label text="Humidity" styleClass="detail-label"/>
+                    <Label fx:id="humidityLabel" text="--" styleClass="detail-value"/>
+                </VBox>
+                <VBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <Label text="Wind" styleClass="detail-label"/>
+                    <Label fx:id="windLabel" text="--" styleClass="detail-value"/>
+                </VBox>
+        </GridPane>
+    </VBox>
+
+    <VBox spacing="10">
+        <Label text="Forecast" styleClass="section-title"/>
+        <HBox fx:id="forecastBox" spacing="15" alignment="CENTER" prefHeight="100"/>
+    </VBox>
+
+    <VBox spacing="8">
+        <Label text="Recent History" styleClass="section-title"/>
+        <ListView fx:id="historyList" styleClass="history"
+                  prefHeight="120" maxHeight="120"/>
+    </VBox>
+
+</VBox>
